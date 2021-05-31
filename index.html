@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Schedule Process</title>
 
+  <!-- Favicon Link -->
+  <link rel="shortcut icon" href="/schedule/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/schedule/img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/schedule/img/favicon.ico"><!--애플용 아이콘-->
+
   <!--Font Awesome Link-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -19,6 +24,9 @@
   <!-- Main CSS link -->
   <link rel="stylesheet" href="/schedule/css/style.css">
 
+  <!-- Animation CSS link -->
+  <link rel="stylesheet" href="/schedule/css/animation.css">
+
 
 
 </head>
@@ -27,7 +35,7 @@
     <!-- Main Dashboard Frame -->
     <div class="dashboard">
       <header>
-        <h2><a href="#">LOGO</a></h2>
+        <h2><a href="#"><img src="/schedule/img/logo.png" alt="logo"></a></h2>
         <ul class="gnb">
           <li><a href="#"><i class="fa fa-trello"></i></a></li>
           <li><a href="#"><i class="fa fa-pencil"></i></a></li>
@@ -36,7 +44,12 @@
         <a href="#" class="sign-out"><i class="fa fa-sign-out"></i></a>
       </header>
       <section class="graph-ui">
-        <div class="intro"></div>
+        <div class="intro">
+          <h2>Database Project Process</h2>
+          <p>데이터베이스 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
+          <a href="#">More View</a>
+          <i class="fa fa-database"></i>
+        </div>
         <div class="each-pofol">
           <div>
             <div class="each-title">
@@ -52,9 +65,44 @@
         </div>
         <div class="total-pofol"></div>
       </section>
-      <section class="table-ui"></section>
+      <section class="table-ui">
+        <div class="new-update">
+          <div class="tit-box">
+            <p>Recent Update</p>
+            <a href="#">More</a>
+          </div>
+          <ul class="con-detail">
+            <li>
+              <i class="fa fa-database"></i>
+              <div class="con-txt">
+                <p><a href="#">데이터베이스 테이블 설계 완료</a></p>
+                <em>20201-05-31</em>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="each-contents">
+          <div class="each-btns">
+            <button class="active">Database</button>
+            <button>API</button>
+            <button>Renewal</button>
+            <button>Planning</button>
+          </div>
+            <ul class="con-detail">
+              <li>
+                <i class="fa fa-database"></i>
+                <div class="con-txt">
+                  <p><a href="#">데이터베이스 테이블 설계 완</a></p>
+                  <em>20201-05-31</em>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 
+  <script src="js/index.js"></script>
 </body>
 </html>

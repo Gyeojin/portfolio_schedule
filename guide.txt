@@ -1,3 +1,9 @@
 #7c41f5 : 메인컬러
 #ff9062
 #3acbe8
+
+//recent icon
+fa-database
+fa-thermometer-half
+fa-clone
+fa-chart-o
