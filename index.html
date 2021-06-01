@@ -21,11 +21,17 @@
   <!-- Reset CSS link -->
   <link rel="stylesheet" href="/schedule/css/reset.css">
 
+  <!-- Plugin CSS Link -->
+  <link rel="stylesheet" href="/schedule/lib/css/lightslider.css">
+
   <!-- Main CSS link -->
   <link rel="stylesheet" href="/schedule/css/style.css">
 
   <!-- Animation CSS link -->
   <link rel="stylesheet" href="/schedule/css/animation.css">
+
+  <!-- Media Query CSS link -->
+  <link rel="stylesheet" href="/schedule/css/media.css">
 
 
 
@@ -42,13 +48,39 @@
           <li><a href="#"><i class="fa fa-search"></i></a></li>
         </ul>
         <a href="#" class="sign-out"><i class="fa fa-sign-out"></i></a>
+
+        <div class="mobile-menu">
+          <span></span>
+          <span></span>
+        </div>
       </header>
       <section class="graph-ui">
         <div class="intro">
-          <h2>Database Project Process</h2>
-          <p>데이터베이스 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
-          <a href="#">More View</a>
-          <i class="fa fa-database"></i>
+          <div class="slide-box">
+            <h2>Database Project Process</h2>
+            <p>데이터베이스 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
+            <a href="#">More View</a>
+            <i class="fa fa-database"></i>
+          </div>
+          <div class="slide-box">
+            <h2>Database Project Process</h2>
+            <p>API 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
+            <a href="#">More View</a>
+            <i class="fa fa-database"></i>
+          </div>
+          <div class="slide-box">
+            <h2>Database Project Process</h2>
+            <p>리뉴얼 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
+            <a href="#">More View</a>
+            <i class="fa fa-database"></i>
+          </div>
+          <div class="slide-box">
+            <h2>Database Project Process</h2>
+            <p>기획 테이블 설계 완료.<br>테이블 UI 디자인 완료</p>
+            <a href="#">More View</a>
+            <i class="fa fa-database"></i>
+          </div>
+
         </div>
         <div class="each-pofol">
           <div>
@@ -79,6 +111,20 @@
                 <em>20201-05-31</em>
               </div>
             </li>
+            <li>
+              <i class="fa fa-database"></i>
+              <div class="con-txt">
+                <p><a href="#">데이터베이스 테이블 설계 완료</a></p>
+                <em>20201-05-31</em>
+              </div>
+            </li>
+            <li>
+              <i class="fa fa-database"></i>
+              <div class="con-txt">
+                <p><a href="#">데이터베이스 테이블 설계 완료</a></p>
+                <em>20201-05-31</em>
+              </div>
+            </li>
           </ul>
         </div>
         <div class="each-contents">
@@ -96,13 +142,41 @@
                   <em>20201-05-31</em>
                 </div>
               </li>
+              <li>
+                <i class="fa fa-database"></i>
+                <div class="con-txt">
+                  <p><a href="#">데이터베이스 테이블 설계 완</a></p>
+                  <em>20201-05-31</em>
+                </div>
+              </li>
+              <li>
+                <i class="fa fa-database"></i>
+                <div class="con-txt">
+                  <p><a href="#">데이터베이스 테이블 설계 완</a></p>
+                  <em>20201-05-31</em>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </section>
     </div>
   </div>
-
-  <script src="js/index.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/schedule/lib/js/lightslider.js"></script>
+  <script src="/schedule/js/index.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".intro").lightSlider({
+        item:1,
+        pager:false,
+        loop: true,
+        slideMargie:0,
+        speed: 400,
+        auto: true,
+        pause: 5000,
+      }); 
+    });
+  </script>
 </body>
 </html>
