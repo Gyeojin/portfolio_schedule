@@ -15,13 +15,14 @@
   text-rendering: auto; 
   font-style:normal;
   font-weight:normal;
+  align-items: center;
 }
 
 /* .custom-font {font-size: 60px; text-align: center;} */
-.custom-font:before {content: "\0530";}
+.custom-font:before {content: "\0530"; }
 
 /* Wrapper Style Code */
-.wrapper{width: 100%; height: 100vh; background: #eee; display: flex; align-items: center; justify-content: center; min-height: 768px;}
+.wrapper{width: 100%; height: 100vh; background: #eee; display: flex; align-items: center; justify-content: center; min-height: 796px;}
 
 /* Main Contents Box Style Code */
 .dashboard{width: 90%; max-width: 1280px; height:90%; background: #f9f9f9; box-shadow: 0 0 128px 0 rgb(0 0 0 / 10%), 0 32px 64px -48px rgb(0 0 0 / 50%); border-radius: 20px; display: flex; justify-content: space-between; padding: 10px;}
@@ -66,12 +67,30 @@ header .sign-out{font-size: 20px;}
 .graph-ui div.intro i {position: absolute; font-size: 200px; right: -20px; top: -10px; opacity: 0.3;}
 
 .graph-ui>div.each-pofol{padding: 20px 0;}
-.graph-ui>div.each-pofol>div{width: 100%; height: 100%; border-radius: 15px;}
+.graph-ui>div.each-pofol>div{width: 100%; height: 100%; border-radius: 15px; }
 .graph-ui .each-pofol .each-title{width: 100%; height: 25%;}
 .graph-ui .each-pofol .each-graph{width: 100%; height: 75%; display: flex; justify-content: space-between;}
-.graph-ui .each-pofol .each-graph div{height: 100%; border: 1px solid #f7f7f7; background: #fff; box-shadow: 0 0 3px #ccc; width: calc(25% - 7.5px);/*박스 당 10px 씩 떨어지므로 30px/4=7.5px임*/border-radius: 20px; display: flex; align-items: center; justify-content: center;}
+.graph-ui .each-pofol .each-graph div{height: 100%; min-height:150px; border: 1px solid #f7f7f7; background: #fff; box-shadow: 0 0 3px #ccc; width: calc(25% - 7.5px);/*박스 당 10px 씩 떨어지므로 30px/4=7.5px임*/border-radius: 20px; display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;}
+.graph-ui .each-pofol .each-graph div b{font-weight: 400; font-size: 12px; margin-top: 7px;}
+.graph-ui .each-pofol .each-graph div i{position: absolute; font-size: 35px; opacity: 0.2; top: 50%; left: 50%; transform:translate(-50%, -50%); display: none;}
+.graph-ui .each-pofol .each-graph div i.fa-database{color:#7c41f5}
+.graph-ui .each-pofol .each-graph div i.fa-thermometer-half{color:#ff9062}
+.graph-ui .each-pofol .each-graph div i.fa-clone{color:#3acbe8}
+.graph-ui .each-pofol .each-graph div i.fa-bar-chart-o{color:rosybrown}
 
-.graph-ui>div.total-pofol{border: 1px solid #f7f7f7; box-shadow: 0 0 3px #ccc; background: #fff;}
+
+
+.graph-ui>div.total-pofol{border: 1px solid #f7f7f7; box-shadow: 0 0 3px #ccc; background: #fff; display: flex;}
+.graph-ui>div.total-pofol>div{border: 1px solid; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+
+.graph-ui>div.total-pofol .percent{font-size: 30px; font-weight: 300; line-height: 0;}
+.graph-ui>div.total-pofol>div.total-chart{width: 40%; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+
+div.total-chart {padding: 10px 0;}
+div.total-chart .chart{width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+div.total-chart .chart canvas{width: auto!important; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.graph-ui>div.total-pofol>div.total-chart h3{font-weight: 400; margin-top: 15px; font-size: 13px;}
+.graph-ui>div.total-pofol>div.total-txt{width: 60%;}
 
 /* Table-ui Contents Style Code */
 .table-ui{width: 35%; height: 100%; display: flex; flex-direction: column; justify-content: space-between;}
