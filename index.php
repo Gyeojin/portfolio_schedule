@@ -40,20 +40,11 @@
   <div class="wrapper">
     <!-- Main Dashboard Frame -->
     <div class="dashboard">
-      <header>
-        <h2><a href="#"><i class="custom-font"></i></a></h2>
-        <ul class="gnb">
-          <li><a href="#"><i class="fa fa-trello"></i></a></li>
-          <li><a href="#"><i class="fa fa-pencil"></i></a></li>
-          <li><a href="#"><i class="fa fa-search"></i></a></li>
-        </ul>
-        <a href="#" class="sign-out"><i class="fa fa-sign-out"></i></a>
+      
+      <?php
+        include $_SERVER['DOCUMENT_ROOT']."/schedule/include/header.php";
+      ?>
 
-        <div class="mobile-menu">
-          <span></span>
-          <span></span>
-        </div>
-      </header>
       <section class="graph-ui">
         <div class="intro">
           <div class="slide-box">
@@ -123,13 +114,15 @@
           <div class="total-chart">
             <span class="chart" data-percent="86">
               <span class="percent"></span>
-              <h3>Total Process Rate</h3>
+              <!-- <h3>Total Process Rate</h3> -->
             </span>
 
           </div>
 
           <div class="total-txt">
-
+            <h3>Total Process Rate</h3>
+            <p>Your process rate is very low...<br>Plz Hurry Up!</p>
+            <button>Update Rate</button>
           </div>
         </div>
       </section>
