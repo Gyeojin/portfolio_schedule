@@ -12,8 +12,11 @@
   /* Table-ui Contents Style Code */
   .table-ui {height: calc(90% - 10px); margin-top: 10px; width: 40%;}
 
-    /* Pie Chart Style Code */
-    .chart{width: 90px; height: 90px;}
+  /* Pie Chart Style Code */
+  .chart{width: 90px; height: 90px;}
+
+  /* Insert Form Page Style Code */
+  .graph-ui .input-con textarea{height: 200px;}
 }
 
 
@@ -33,6 +36,10 @@
 
   .graph-ui>div.total-pofol>div.total-chart{width: 50%;}
   div.total-txt{width: 50%;}
+
+  /* Insert Form Page Style Code */
+  .graph-ui>div.input-box{height: calc(60% - 10px);}
+  .graph-ui .input-con textarea{height: 180px;}
 
 }
 
@@ -77,8 +84,6 @@
 
   .mobile-menu{display: block;}
 
-
-
   /* Graph-ui Contents Style Code */
   .graph-ui div.intro .slide-box{padding: 20px 50px; text-align: center; align-items: center;}
   .graph-ui div.intro h2{font-size: 18px;}
@@ -93,6 +98,12 @@
   .graph-ui>div.total-pofol>div.total-txt{width: 100%; height: 50%; padding: 0; text-align: center;}
   .graph-ui>div.total-pofol>div.total-txt button{margin: 20px auto;}
 
-
+  /* Insert Form Page Style Code */
+  .graph-ui>div.input-box{padding: 20px 10px;}
+  .graph-ui .title-box h3{font-size: 16px;}
+  .graph-ui .input-box .input-tit input{font-size: 12px;}
+  .graph-ui .input-box .input-tit select{font-size: 12px;}
+  .graph-ui .input-con textarea{font-size: 12px;}
+  .graph-ui .btns button {font-size: 12px; padding: 8px 15px;}
 }
 

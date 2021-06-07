@@ -110,85 +110,17 @@
             </div>
           </div>
         </div>
-        <div class="total-pofol">
-          <div class="total-chart">
-            <span class="chart" data-percent="86">
-              <span class="percent"></span>
-              <!-- <h3>Total Process Rate</h3> -->
-            </span>
+        
+        <?php
+        include $_SERVER['DOCUMENT_ROOT']."/schedule/include/total-pofol.php";
+        ?>
 
-          </div>
+      </section>
+      
+      <?php
+        include $_SERVER['DOCUMENT_ROOT']."/schedule/include/table-ui.php";
+      ?>
 
-          <div class="total-txt">
-            <h3>Total Process Rate</h3>
-            <p>Your process rate is very low...<br>Plz Hurry Up!</p>
-            <button>Update Rate</button>
-          </div>
-        </div>
-      </section>
-      <section class="table-ui">
-        <div class="new-update">
-          <div class="tit-box">
-            <p>Recent Update</p>
-            <a href="#">More</a>
-          </div>
-          <ul class="con-detail">
-            <li>
-              <i class="fa fa-database"></i>
-              <div class="con-txt">
-                <p><a href="#">데이터베이스 테이블 설계 완료</a></p>
-                <em>20201-05-31</em>
-              </div>
-            </li>
-            <li>
-              <i class="fa fa-database"></i>
-              <div class="con-txt">
-                <p><a href="#">데이터베이스 테이블 설계 완료</a></p>
-                <em>20201-05-31</em>
-              </div>
-            </li>
-            <li>
-              <i class="fa fa-database"></i>
-              <div class="con-txt">
-                <p><a href="#">데이터베이스 테이블 설계 완료</a></p>
-                <em>20201-05-31</em>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="each-contents">
-          <div class="each-btns">
-            <button class="active">Database</button>
-            <button>API</button>
-            <button>Renewal</button>
-            <button>Planning</button>
-          </div>
-            <ul class="con-detail">
-              <li>
-                <i class="fa fa-database"></i>
-                <div class="con-txt">
-                  <p><a href="#">데이터베이스 테이블 설계 완</a></p>
-                  <em>20201-05-31</em>
-                </div>
-              </li>
-              <li>
-                <i class="fa fa-database"></i>
-                <div class="con-txt">
-                  <p><a href="#">데이터베이스 테이블 설계 완</a></p>
-                  <em>20201-05-31</em>
-                </div>
-              </li>
-              <li>
-                <i class="fa fa-database"></i>
-                <div class="con-txt">
-                  <p><a href="#">데이터베이스 테이블 설계 완</a></p>
-                  <em>20201-05-31</em>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
     </div>
   </div>
   <!-- Jquery Framework Load -->
