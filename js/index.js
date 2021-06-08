@@ -1,7 +1,7 @@
-//Cutting Contents Text
-const conTxt = document.querySelectorAll('.con-txt p a');
 
-conTxt.forEach(element => {
+let contentText = document.querySelectorAll('.con-txt p a');
+
+contentText.forEach(element => {
   // console.log(element.textContent.slice(0,10) + "...");
   const cutTxt = element.textContent.slice(0,10) + "...";
   element.textContent = cutTxt;
@@ -131,3 +131,30 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   startPie();
 });
+
+//Open Modal for Input Rates//
+//1. 버튼 DOM 저장 => index.php 134줄
+const modalBtn = document.querySelector('#open-modal');
+
+//5. modal 변수에 모달박스 DOM 저장
+const modal = document.querySelector('#myModal');
+
+//6. X 버튼 DOM 저장
+const times = document.querySelector('#times');
+
+//4. modalBtn을 클릭했을 때 모달 박스 보이기
+modalBtn.onclick = function() {
+  modal.style.display = "block";
+}
+
+//7. X 버튼 클릭 시 모달창 제거
+//times.onclick = function() {
+//  modal.style.display = "none";
+//}
+
+// 8. 모달 이외 영역 클릭 시 모달창 제거
+window.onclick = function(event) {//윈도우 전체를 클릭했을 때 event 함수를 실행시킴
+  if (event.target == modal) {//만약 이벤트 타겟이 modal일 경우 modal의 style의 display가 none으로.
+    modal.style.display = "none";
+  }
+}

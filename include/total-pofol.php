@@ -16,13 +16,12 @@
       <div class="total-txt">
         <h3>Total Process Rate</h3>
         <p>Your process rate is very low...<br>Plz Hurry Up!</p>
-        <button>Update Rate</button>
+        <button id="open-modal">Update Rate</button>
       </div>
     </div>
+    
 
-  <script src="/schedule/lib/js/easypiechart.js"></script>
-  <!-- Vanilla JS code Load -->
-  <script src="/schedule/js/index.js"></script>
+  
 </body>
 </html>
   

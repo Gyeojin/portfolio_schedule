@@ -34,6 +34,14 @@
   <!-- Media Query CSS link -->
   <link rel="stylesheet" href="/schedule/css/media.css">
 
+  <script defer>
+    const hostname = window.location.href;
+    //console.log(hostname);
+    if(hostname == 'http://localhost/schedule/'){
+      window.location.replace('http://localhost/schedule/index.php?key=database');
+    }
+  </script>
+
 </head>
 
 <body>
@@ -122,6 +130,42 @@
       ?>
 
     </div>
+
+  <!-- 2.모달박스 UI 제작 => style.css 140번줄-->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <!-- <span class="close" id="times">&times;</span>
+      <p>Some text in the Modal..</p> -->
+      <form action="/schedule/php/sp_rate_insert.php" class="rate-form" name="rate_form"> <!--php파일 연결해줄 경로 지정-->
+        <p>
+          <label for="db_prj">DB Project</label>
+          <input type="text" id="db_prj" value="78" name="db_prj">
+        </p>
+        <p>
+          <label for="api_prj">API Project</label>
+          <input type="text" id="api_prj" value="60" name="api_prj">
+        </p>
+        <p>
+          <label for="ren_prj">Renewal Project</label>
+          <input type="text" id="ren_prj" value="55" name="ren_prj">
+        </p>
+        <p>
+          <label for="pla_prj">Planning Project</label>
+          <input type="text" id="pla_prj" value="90" name="pla_prj">
+        </p>
+      </form>
+      <div class="updateBtnBox">
+        <button type="button" id="updateBtn">Update Rate</button>
+      </div>
+    </div>
+    <script>
+      const updateBtn = document.querySelector('#updateBtn');
+      updateBtn.onclick = function(){
+        document.rate_form.submit();
+      }
+    </script>
   </div>
   <!-- Jquery Framework Load -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
