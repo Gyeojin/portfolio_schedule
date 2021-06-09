@@ -9,7 +9,7 @@
   //echo $sp_idx, $sp_db, $sp_api, $sp_ren, $sp_pla;
   include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php"; //db 접속정보 로드하기
 
-  $sql = "UPDATE sp_rate SET Rate_db=db_prj, Rate_api=$sp_api, Rate_ren=$sp_ren, Rate_pla=$sp_pla WHERE RATE_idx=$sp_idx";
+  $sql = "UPDATE sp_rate SET Rate_db=$sp_db, Rate_api=$sp_api, Rate_ren=$sp_ren, Rate_pla=$sp_pla WHERE RATE_idx=$sp_idx";
 
   mysqli_query($dbConn, $sql);
 
@@ -27,4 +27,12 @@
 
 //var_dump($arr);
   file_put_contents($_SERVER["DOCUMENT_ROOT"].'/schedule/data/sp_rate.json',json_encode($arr));
+
+  echo "
+    <script>
+      alert('수정이 완료되었습니다!');
+      location.href='/schedule/index.php?key=database';
+    </script>
+  ";
+
 ?>

@@ -139,7 +139,7 @@ div.total-txt button:hover{background: #7c41f5; color: #fff;}
 
 /* 3.모달박스 CSS 작성 => index.js 135번째 줄*/
 .modal {
-  _display: none; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 99; /* Sit on top */
   left: 0;

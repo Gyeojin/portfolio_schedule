@@ -96,5 +96,15 @@
     </div>
   </div>
     <!-- End of Main Dashboard Frame -->
+    <!-- Jquery Framework Load -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Plugins Load -->
+    <script src="/schedule/lib/js/lightslider.js"></script>
+    <script src="/schedule/lib/js/easypiechart.js"></script>
+    <!-- Vanilla JS code Load -->
+    <script src="/schedule/js/index.js"></script>
+    <!-- Jquery Code Load -->
+    <script src="/schedule/js/jquery.index.js"></script>
+    <script src="/schedule/js/modalAjax.js"></script>
 </body>
 </html>
