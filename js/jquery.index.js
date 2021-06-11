@@ -1,16 +1,16 @@
-
-
 $(document).ready(function() {
   //Lightslider Plugin Code
   $(".intro").lightSlider({
     item:1,
     pager:false,
-    loop: true,
-    slideMargie:0,
-    speed: 400,
+    slideMargin: 0,
+    loop:true,
+    speed: 400, //ms'
     auto: true,
-    pause: 5000,
+    pause: 7000,
     mode:'fade',
     adaptiveHeight:true,
-  }); 
+  });
+
+  $(".each-btns a").eq(0).trigger("click");
 });

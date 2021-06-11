@@ -1,6 +1,6 @@
 @keyframes fade-up-01{
-  0%{transform: translateY(25px); opacity: 0;}
-  100%{transform: translateY(0px); opacity: 1;}
+  0%{transform:translateY(25px); opacity:0;}
+  100%{transform:translateY(0px); opacity:1;}
 }
 
 @keyframes fade-up-02{

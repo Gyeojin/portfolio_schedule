@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- 생성 시간: 21-06-04 08:31
+-- 생성 시간: 21-06-04 08:32
 -- 서버 버전: 10.4.19-MariaDB
--- PHP 버전: 8.0.6
+-- PHP 버전: 7.3.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `sp_table` (
   `SP_idx` int(11) NOT NULL COMMENT '고유번호',
   `SP_cate` varchar(30) CHARACTER SET utf8 NOT NULL COMMENT '프로젝트 종류',
   `SP_tit` varchar(50) CHARACTER SET utf8 NOT NULL COMMENT '업무 제목',
-  `SP_con` text CHARACTER SET utf8 COLLATE utf8_german2_ci NOT NULL COMMENT '업무 내용',
+  `SP_con` text CHARACTER SET utf8 NOT NULL COMMENT '업무 내용',
   `SP_reg` date NOT NULL COMMENT '등록일'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
