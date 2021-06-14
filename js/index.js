@@ -153,7 +153,7 @@ modalBtn.onclick = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-//7. X 버튼 클릭 시 모달창 제거
+//7. X 버튼 클릭 시 모달창 제거 (사용 XXXXXXXX)
 // times.onclick = function() {
 //   modal.style.display = "none";
 // }

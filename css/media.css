@@ -90,7 +90,6 @@
   .graph-ui div.intro .slide-box{padding:20px 50px; text-align:center; align-items: center;}
   .graph-ui div.intro h2{font-size:18px;}
   .graph-ui div.intro P{display:none;}
-  .graph-ui div.intro a{}
 
   .graph-ui .each-pofol .each-graph{flex-wrap:wrap;}
   .graph-ui .each-pofol .each-graph div{width:calc(50% - 5px); margin-top:10px;}

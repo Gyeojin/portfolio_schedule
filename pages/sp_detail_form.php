@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/schedule/css/animation.css">
 
   <!-- Media Query CSS Link -->
-  <link rel="stylesheet" href="/schedule/css/Media.css">
+  <link rel="stylesheet" href="/schedule/css/media.css">
 
   <script defer>
     const hostname = window.location.href;

@@ -12,5 +12,11 @@ $(document).ready(function() {
     adaptiveHeight:true,
   });
 
+  $(".each-btns a").click(function(e){
+    e.preventDefault();
+  });
+
+
+
   $(".each-btns a").eq(0).trigger("click");
 });

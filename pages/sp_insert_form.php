@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="/schedule/css/animation.css">
 
   <!-- Media Query CSS Link -->
-  <link rel="stylesheet" href="/schedule/css/Media.css">
+  <link rel="stylesheet" href="/schedule/css/media.css">
 </head>
 <body>
   <div class="wrapper">
@@ -94,6 +94,33 @@
         include $_SERVER['DOCUMENT_ROOT']."/schedule/include/table_ui.php";
       ?>
 
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <!-- <span class="close" id="times">&times;</span>
+            <p>Some text in the Modal..</p> -->
+            <form action="/schedule/php/sp_rate_insert.php" class="rate-form" name="rate_form">
+                      
+            </form>
+            <div class="updateBtnBox">
+              <button type="button" id="updateBtn">Update Rate</button>
+            </div>    
+          </div>
+          <script>
+            const updateBtn = document.querySelector('#updateBtn');
+            //const modal = document.querySelector('#myModal');
+            updateBtn.onclick = function(){
+              //alert('abc');
+              document.rate_form.submit();
+              modal.style.display = "none";
+            }
+
+          </script>
+
+        </div>
+
     </div>
     <!-- End of Main Dashboard Frame -->
   </div>
@@ -105,6 +132,7 @@
   <script src="/schedule/lib/js/jquery.easypiechart.min.js"></script>
   <!-- Vanilla JS Code Load -->
   <script src="/schedule/js/index.js"></script>
+  <script src="/schedule/js/modalAjax.js"></script>
   <!-- jQuery Code Load -->
   <script src="/schedule/js/total_avg.js"></script>
   <script src="/schedule/js/jquery.index.js"></script>

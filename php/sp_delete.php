@@ -1,3 +1,6 @@
+<meta charset="UTF-8">
+
+
 <?php
 
   $del_idx = $_GET['del_idx'];

@@ -1,3 +1,6 @@
+<meta charset="UTF-8">
+
+
 <?php
 
   $sp_idx = 1;
@@ -10,6 +13,7 @@
 
   include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";//db 접속정보 로드
   $sql = "UPDATE sp_rate SET RATE_db = $sp_db, RATE_api = $sp_api, RATE_ren = $sp_ren, RATE_pla = $sp_pla WHERE RATE_idx = $sp_idx";
+
 
   mysqli_query($dbConn, $sql);
 
@@ -28,7 +32,7 @@
     ));
   }
 
-  file_put_contents($_SERVER["DOCUMENT_ROOT"].'/schedule/data/sp_rate.json', json_encode($arr));
+  file_put_contents($_SERVER["DOCUMENT_ROOT"].'/schedule/data/sp_rate.json', json_encode($arr)); //json 코드로 만들어주는 과정
 
   // var_dump($abc);
   // $abc = json_encode($arr);
