@@ -123,8 +123,8 @@ div.total-txt button:hover{background:#7c41f5; color:#fff;}
 /* .table-ui .new-update .con-txt p a{overflow:hidden; white-space:nowrap; text-overflow: ellipsis; display:block;} */
 .table-ui .con-txt p a:hover{text-decoration: underline;}
 .table-ui .con-txt em{font-style:normal; font-size:12px;}
-.table-ui .each-contents .each-btns a{width:25%; display:block; border:1px solid #fff; background:#ff9062; color:#fff; padding:10px 0; font-weight:400; border-radius:10px; text-align:center;}
-.table-ui .each-contents .each-btns a.active{color:#ff9062; background:#fff; border:1px solid #ff9062}
+.table-ui .each-contents .each-btns button{width:25%; display:block; border:1px solid #fff; background:#ff9062; color:#fff; padding:10px 0; font-weight:400; border-radius:10px; text-align:center;}
+.table-ui .each-contents .each-btns button.active{color:#ff9062; background:#fff; border:1px solid #ff9062}
 
 /* Insert Form Page Graph-ui Contents Style Code */
 .graph-ui>div.input-box{width:100%; height:calc(66.66% - 10px);border-radius:15px; border:1px solid #f7f7f7; box-shadow:0px 0px 3px #ccc; background:#fff; display:flex; margin-top:10px; flex-direction: column; padding:20px;}
@@ -172,15 +172,18 @@ z-index: 999; /* Sit on top */left: 0;top: 0;width: 100%; /* Full width */height
 .graph-ui.detail .detail-board{width:100%; height:calc(60% - 10px); background:#fff; border:1px solid #f7f7f7; box-shadow:0 0 3px #ccc; padding:30px 20px; overflow:hidden; overflow-y: auto;}
 .graph-ui.detail .detail-board::-webkit-scrollbar{display:none;}
 .detail-board .board-btns{width:100%; height:auto; display:flex;}
-.detail-board .board-btns a{background:#ff9062; display:block; padding:8px 15px; border:1px solid #ff9062; color:#fff; border-radius:3px; margin:0 1px; transition:all 0.4s;}
-.detail-board .board-btns a:hover{background:#fff; color:#ff9062;}
+.detail-board .board-btns a, .board-table-btn .more-btn{background:#ff9062; display:block; padding:8px 15px; border:1px solid #ff9062; color:#fff; border-radius:3px; margin:0 1px; transition:all 0.4s;}
+.detail-board .board-btns a:hover,
+.detail-board .board-btns a.active,
+.board-table-btn .more-btn:hover{background:#fff; color:#ff9062;}
 
 .board-table{width:100%; height:auto; margin:10px 0;}
 .board-table ul{width:100%; height:auto; display:flex; flex-direction: column;}
 .board-table li{width:100%; _padding:8px 0; text-align:center; display:flex;}
 .board-table li.board-contents{border-bottom:1px solid #f0f0f0;}
 .board-table li span{padding:5px 0; display:flex; align-items: center; justify-content: center;}
-.board-table li.board-contents span{color:#555; padding:5px 10px;}
+.board-table li.board-contents span{color:#555; padding:10px 10px;}
+.board-table li:nth-child(odd){background: #f0f0f0;} /*odd : 짝수번, even : 홀수번*/
 .board-table li.board-contents span:nth-child(3){justify-content: flex-start;}
 .board-table li.board-contents span a{color:#555;}
 .board-table li.board-contents span a:hover{text-decoration: underline;}
@@ -191,3 +194,5 @@ z-index: 999; /* Sit on top */left: 0;top: 0;width: 100%; /* Full width */height
 .board-table li span:nth-child(3){width:40%;}
 .board-table li span:nth-child(4){width:20%;}
 .board-table li span:nth-child(5){width:10%;}
+
+.board-table-btn{margin: 20px 0; display: flex; justify-content: center;}

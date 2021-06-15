@@ -68,11 +68,11 @@
 
         <div class="detail-board">
           <div class="board-btns">
-            <a href="#">All</a>
-            <a href="#">Database</a>
-            <a href="#">API</a>
-            <a href="#">Renewal</a>
-            <a href="#">Planning</a>
+            <a href="?key=all" class="active">All</a>
+            <a href="?key=database">Database</a>
+            <a href="?key=api">API</a>
+            <a href="?key=renewal">Renewal</a>
+            <a href="?key=planning">Planning</a>
           </div>
 
           <div class="board-table">
@@ -85,30 +85,25 @@
                 <span>삭제</span>
               </li>
 
+              <!--게시판 글 (api.php파일) 경로 이어줌-->
               <?php
-                include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";//db 접속정보 로드
-                $sql = "SELECT * FROM sp_table ORDER BY SP_idx DESC LIMIT 5";
-                $board_result = mysqli_query($dbConn, $sql);
-
-                while($board_row=mysqli_fetch_array($board_result)){
-                  $board_row_idx = $board_row['SP_idx'];
-                  $board_row_cate = $board_row['SP_cate'];
-                  $board_row_tit = $board_row['SP_tit'];
-                  $board_row_reg = $board_row['SP_reg'];
+              $include_path=$_GET['key']; //각각의 다른 키값을 include_path에다 저장함
+                include $_SERVER['DOCUMENT_ROOT'].'/schedule/include/tabs/'.$include_path.'.php';
               ?>
-
-              <li class="board-contents">
-                <span><?=$board_row_idx?></span>
-                <span><?=$board_row_cate?></span>
-                <span><a href="#"><?=$board_row_tit?></a></span>
-                <span><?=$board_row_reg?></span>
-                <span><a href="/schedule/php/sp_delete.php?del_idx=<?=$board_row_idx?>" class="del-btn">삭제</a></span>
-              </li>
-
-              <?php
-                }
-              ?>
+              
             </ul>
+          </div>
+          <!--End of board table-->
+          <div class="board-table-btn">
+            <!-- <form action="#" class="search-box">
+              <select>
+                <option value="">아이디</option>
+                <option value="">제목</option>
+              </select>
+              <input type="text">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form> -->
+            <button type="button" class = "more-btn">더보기</button>
           </div>
         </div>
         
@@ -129,7 +124,22 @@
   <script src="/schedule/js/index.js"></script>
   <!-- jQuery Code Load -->
   <script src="/schedule/js/jquery.index.js"></script>
+  
+  <!-- jquery code -->
+  <script>
+    $(function(){
+      //더보기 버튼 기능
+      $(".board-contents").hide(); //컨텐츠 가리는 코드
+      $(".board-contents").slice(0, 5).show(); //컨텐츠를 0번부터 5개씩 잘라서(slice) 보여준다 (show)
 
+      $(".more-btn").click(function(){
+        //console.log($(".board-contents:hidden").length); 
+        $(".board-contents:hidden").slice(0,5).show(); //more-btn을 클릭했을 때 .board-contents에서 현재 가려진것들(:hidden) 중에서 0번부터 5개씩 잘라서 보여준다.
+      });
+      //테이블 탭 활성화 기능
+     
+    });
+  </script>
 
 </body>
 </html>

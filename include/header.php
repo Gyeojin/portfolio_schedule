@@ -16,7 +16,7 @@
       <span class="mid-bottom"></span>
     </li>
     <li>
-      <a href="/schedule/pages/sp_detail_form.php?key=database"><i class="fa fa-search"></i></a>
+      <a href="/schedule/pages/sp_detail_form.php?key=all"><i class="fa fa-search"></i></a>
       <span class="mid-top"></span>
       <span class="mid-act"></span>
       <span class="mid-back"></span>

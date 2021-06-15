@@ -28,7 +28,6 @@
 
   //--------------Tab--------------//
 
-  mysqli_query($dbConn, $sql);
 
   $sql1 = "SELECT * FROM sp_table ORDER BY SP_idx DESC";
 
