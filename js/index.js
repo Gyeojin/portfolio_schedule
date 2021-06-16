@@ -18,7 +18,7 @@ $(function(){
   $(window).ajaxComplete(function(){
     let lWidth = 10;
     let tWidth = 8;
-    let eachSize = 110;
+    let eachSize = 110; 
 
     let pieSize = 200;
     let clearSet;

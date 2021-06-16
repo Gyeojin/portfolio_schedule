@@ -140,6 +140,38 @@
      
     });
   </script>
+  <script>
+    const pathName = window.location.href; //현재 url 주소를 가져오는 함수
+    const tabBtns = document.querySelectorAll('.board-btns a');
+    const tabElements = ['all','database','api','renewal','planning'];
+    //console.log(tabBtns);
+    //console.log(pathName);
 
+
+    for(let i=0; i < tabBtns.length; i++){
+      tabBtns[i].classList.remove('active');
+      if(pathName.includes(tabElements[i])){
+        tabBtns[i].classList.add('active');
+      }
+    }
+
+    // tabBtns.forEach(btn => {
+    //   btn.classList.remove('active');
+    // });
+
+    //includes(); : string.includes( searchString, length(써도 되고 안써도 됨) ) -> 문자열이 특정 문자열을 포함하는지 확인하는 메서드
+    // if(pathName.includes('all')){
+    //   tabBtns[0].classList.add('active');
+    // } else if(pathName.includes('database')){
+    //   tabBtns[1].classList.add('active');
+    // } else if(pathName.includes('api')){
+    //   tabBtns[2].classList.add('active');
+    // } else if(pathName.includes('renewal')){
+    //   tabBtns[3].classList.add('active');
+    // } else if(pathName.includes('planning')){
+    //   tabBtns[4].classList.add('active');
+    // }
+
+  </script>
 </body>
 </html>
