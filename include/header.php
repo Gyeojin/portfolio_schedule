@@ -29,6 +29,13 @@
     <span></span>
     <span></span>
   </div>
+
+  <ul class="mobile-menu-items">
+    <li><a href="#"><i class="fa fa-trello"></i></a></li>
+    <li><a href="#"><i class="fa fa-pencil"></i></a></li>
+    <li><a href="#"><i class="fa fa-search"></i></a></li>
+    <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+  </ul>
 </header>
 
 <script>

@@ -39,7 +39,7 @@
   </div>
   <div class="each-contents">
     <div class="each-btns">
-      <button value='database' class="active">Database</button> <!--태그의 속성 : 태그 옆에 있는것-->
+      <button value='database' class="active">DB</button> <!--태그의 속성 : 태그 옆에 있는것-->
       <button value='thermometer-half'>API</button>
       <button value='clone'>Renewal</button>
       <button value='bar-chart-o'>Planning</button>

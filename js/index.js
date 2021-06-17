@@ -6,13 +6,6 @@ conTxt.forEach(element => {
   element.textContent = cutTxt;
 });
 
-//Mobile Menu Activate
-const mobileMenu = document.querySelector('.mobile-menu');
-
-mobileMenu.onclick = () => {
-  mobileMenu.classList.toggle('active');
-}
-
 //Pie Chart Rendering Code
 $(function(){
   $(window).ajaxComplete(function(){
@@ -64,7 +57,7 @@ $(function(){
         pieSize = 200;
       }
 
-      console.log(pieSize);
+      //console.log(pieSize);
 
       clearTimeout(clearSet);
       clearSet = setTimeout(function(){
@@ -135,6 +128,23 @@ $(function(){
   }
   startPie();
 
+  });
+
+  //Mobile Menu Activate
+  // const mobileMenu = document.querySelector('.mobile-menu');
+
+  // mobileMenu.onclick = () => {
+  //   mobileMenu.classList.toggle('active');
+  // }
+
+  $(".mobile-menu").click(function(){
+    $(this).toggleClass("active");
+
+    if($(this).hasClass("active")){
+      $(this).next().addClass("show-hide") //next(); : 지정한 클래스의 다음 태그를 지정해줌
+    } else {
+      $(this).next().removeClass("show-hide")
+    }
   });
 });
 
