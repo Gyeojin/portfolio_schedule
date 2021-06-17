@@ -14,7 +14,7 @@
 }
 
 /* Mobile Menu Items Show Hide Animation */
-@keyframes show-hide {
+@keyframes show {
   0%{transform: translateY(-40px); opacity: 0; visibility: hidden;}
   100%{transform: translateY(0px); opacity: 1; visibility: visible;}
 }

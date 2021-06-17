@@ -141,9 +141,11 @@ $(function(){
     $(this).toggleClass("active");
 
     if($(this).hasClass("active")){
-      $(this).next().addClass("show-hide") //next(); : 지정한 클래스의 다음 태그를 지정해줌
+      $(this).next().removeClass("hide"); //nexwt(); : 지정한 클래스의 다음 태그를 지정해줌
+      $(this).next().addClass("show"); //next(); : 지정한 클래스의 다음 태그를 지정해줌
     } else {
-      $(this).next().removeClass("show-hide")
+      $(this).next().removeClass("show");
+      $(this).next().addClass("hide");
     }
   });
 });

@@ -33,14 +33,6 @@
 
   <!-- Media Query CSS Link -->
   <link rel="stylesheet" href="/schedule/css/media.css">
-
-  <script defer>
-    const hostname = window.location.href;
-    console.log(hostname);
-    if(hostname == 'http://gyeoj93.dothome.co.kr/schedule/'){
-      window.location.replace('http://gyeoj93.dothome.co.kr/schedule/index.php?key=database');
-    }
-  </script>
 </head>
 <body>
   

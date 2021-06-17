@@ -70,9 +70,9 @@
           <div class="board-btns">
             <a href="?key=all" class="active">All</a>
             <a href="?key=database">Database</a>
-            <a href="?key=api">API</a>
-            <a href="?key=renewal">Renewal</a>
-            <a href="?key=planning">Planning</a>
+            <a href="?key=thermometer-half">API</a>
+            <a href="?key=clone">Renewal</a>
+            <a href="?key=bar-chart-o">Planning</a>
           </div>
 
           <div class="board-table">
@@ -88,7 +88,7 @@
               <!--게시판 글 (api.php파일) 경로 이어줌-->
               <?php
               $include_path=$_GET['key']; //각각의 다른 키값을 include_path에다 저장함
-                include $_SERVER['DOCUMENT_ROOT'].'/schedule/include/tabs/'.$include_path.'.php';
+                include $_SERVER['DOCUMENT_ROOT'].'/schedule/include/tabs/all.php';
               ?>
               
             </ul>
@@ -143,7 +143,7 @@
   <script>
     const pathName = window.location.href; //현재 url 주소를 가져오는 함수
     const tabBtns = document.querySelectorAll('.board-btns a');
-    const tabElements = ['all','database','api','renewal','planning'];
+    const tabElements = ['all','database','thermometer-half','clone','bar-chart-o'];
     //console.log(tabBtns);
     //console.log(pathName);
 
