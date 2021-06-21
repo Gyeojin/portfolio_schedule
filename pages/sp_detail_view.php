@@ -67,44 +67,62 @@
         </div>
 
         <div class="detail-board">
-          <div class="board-btns">
-            <a href="?key=all" class="active">All</a>
-            <a href="?key=database">Database</a>
-            <a href="?key=thermometer-half">API</a>
-            <a href="?key=clone">Renewal</a>
-            <a href="?key=bar-chart-o">Planning</a>
+        <?php
+          $page_num = $_GET['pageNum']; //주소창번호 변수 설정
+          //echo $page_num;
+
+          include $_SERVER["DOCUMENT_ROOT"]."/connect/db_conn.php";//db 접속정보 로드
+          $sql = "SELECT * FROM sp_table WHERE SP_idx = $page_num"; //sp_table 데이터베이스에 sp_idx가 $page_num인 데이터를 가져온다
+
+          $detail_result = mysqli_query($dbConn, $sql);
+          $detail_row = mysqli_fetch_array($detail_result);
+
+          $detail_tit = $detail_row['SP_tit'];
+          $detail_num = $detail_row['SP_idx'];
+          $detail_cate = $detail_row['SP_cate'];
+          $detail_con = $detail_row['SP_con'];
+          $detail_reg = $detail_row['SP_reg'];
+
+          //echo $detail_num,$detail_cate;
+        ?>
+        <form action="/schedule/php/update_details.php?abc=1"> <!--method 가 없으면 GET 방식이 디폴트-->
+          <div class="detail-title">
+            <h2><?=$detail_tit?></h2>
+            <input type="text" value="<?=$detail_tit?>" class="hidden-tit" name="update_tit">
+            <input type="hidden" value="<?=$detail_num?>" name="update_num">
           </div>
 
-          <div class="board-table">
+          <div class="board-table detail-view">
             <ul>
               <li class="board-title">
                 <span>번호</span>
                 <span>분류</span>
-                <span>제목</span>
+                <span>내용</span>
                 <span>등록일</span>
-                <span>삭제</span>
               </li>
 
-              <!--게시판 글 (api.php파일) 경로 이어줌-->
-              <?php
-              $include_path=$_GET['key']; //각각의 다른 키값을 include_path에다 저장함
-                include $_SERVER['DOCUMENT_ROOT'].'/schedule/include/tabs/all.php';
-              ?>
-              
+              <li class="board-contents">
+                <span><?=$detail_num?></span>
+                <span><?=$detail_cate?></span>
+                <span>
+                  <em><?=$detail_con?></em>
+                  <textarea class="hidden-con" name="update_con"><?=$detail_con?></textarea>
+                </span>
+                <span><?=$detail_reg?></span>
+              </li>
+
             </ul>
           </div>
-          <!--End of board table-->
-          <div class="board-table-btn">
-            <!-- <form action="#" class="search-box">
-              <select>
-                <option value="">아이디</option>
-                <option value="">제목</option>
-              </select>
-              <input type="text">
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form> -->
-            <button type="button" class = "more-btn">더보기</button>
+            <!--End of board table-->
+            <div class="send-update">
+              <button type="submit">수정 입력</button>
+            </div>
+        </form>
+
+          <div class="detail-btns">
+            <button type="button" class="update-btn">수정</button>
           </div>
+          
         </div>
         
       </section>
@@ -126,52 +144,23 @@
   <script src="/schedule/js/jquery.index.js"></script>
   
   <!-- jquery code -->
+
   <script>
     $(function(){
-      //더보기 버튼 기능
-      $(".board-contents").hide(); //컨텐츠 가리는 코드
-      $(".board-contents").slice(0, 5).show(); //컨텐츠를 0번부터 5개씩 잘라서(slice) 보여준다 (show)
+       $(".update-btn").click(function(){
+        $(this).toggleClass("on"); //this는 자신을 감싸는 함수를 그대로 받는건지?
 
-      $(".more-btn").click(function(){
-        //console.log($(".board-contents:hidden").length); 
-        $(".board-contents:hidden").slice(0,5).show(); //more-btn을 클릭했을 때 .board-contents에서 현재 가려진것들(:hidden) 중에서 0번부터 5개씩 잘라서 보여준다.
-      });
-      //테이블 탭 활성화 기능
-     
+         if($(this).hasClass("on")){ //update-btn을 클릭했을 때 on 클래스를 갖고 있으면
+             $(".detail-view em, .detail-title h2").hide();
+             $(".hidden-tit, .hidden-con, .send-update").show(); //해당 클래스들을 보여준다 (=display:block)
+             $(this).text('수정 취소');
+         } else { //update-btn을 클릭했을 때 on 클래스가 없으면
+             $(".detail-view em, .detail-title h2").show();
+             $(".hidden-tit, .hidden-con, .send-update").hide(); //해당 클래스들을 숨긴다 (=display:none)
+             $(this).text('수정');
+         }
+       });
     });
-  </script>
-  <script>
-    const pathName = window.location.href; //현재 url 주소를 가져오는 함수
-    const tabBtns = document.querySelectorAll('.board-btns a');
-    const tabElements = ['all','database','thermometer-half','clone','bar-chart-o'];
-    //console.log(tabBtns);
-    //console.log(pathName);
-
-
-    for(let i=0; i < tabBtns.length; i++){
-      tabBtns[i].classList.remove('active');
-      if(pathName.includes(tabElements[i])){
-        tabBtns[i].classList.add('active');
-      }
-    }
-
-    // tabBtns.forEach(btn => {
-    //   btn.classList.remove('active');
-    // });
-
-    //includes(); : string.includes( searchString, length(써도 되고 안써도 됨) ) -> 문자열이 특정 문자열을 포함하는지 확인하는 메서드
-    // if(pathName.includes('all')){
-    //   tabBtns[0].classList.add('active');
-    // } else if(pathName.includes('database')){
-    //   tabBtns[1].classList.add('active');
-    // } else if(pathName.includes('api')){
-    //   tabBtns[2].classList.add('active');
-    // } else if(pathName.includes('renewal')){
-    //   tabBtns[3].classList.add('active');
-    // } else if(pathName.includes('planning')){
-    //   tabBtns[4].classList.add('active');
-    // }
-
   </script>
 </body>
 </html>

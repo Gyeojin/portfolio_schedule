@@ -1,8 +1,8 @@
 <?php
-
+  //쿠키와 마찬가지로 세션도 어떤 헤더보다도 먼저 생성해야만 합니다.
   session_start();
-  if(isset($_SESSION['authcode'])){ //isset : php에 'authcode' 라는게 있는지 존재여부를 확인
-    $authcode = $_SESSION['authcode'];
+  if(isset($_SESSION['usercode'])){ //isset : php에 'authcode' 라는게 있는지 존재여부를 확인
+    $authcode = $_SESSION['usercode'];
   } else {
     echo "
       <script>
@@ -38,7 +38,7 @@
       <span class="nav-bottom"></span>
     </li>
   </ul>
-  <a href="#" class="sign-out"><i class="fa fa-sign-out"></i></a>
+  <a href="/schedule/php/sign_out.php" class="sign-out"><i class="fa fa-sign-out"></i></a>
 
   <div class="mobile-menu">
     <span></span>
@@ -49,7 +49,7 @@
     <li><a href="/schedule/index.php"><i class="fa fa-trello"></i></a></li>
     <li><a href="/schedule/pages/sp_insert_form.php"><i class="fa fa-pencil"></i></a></li>
     <li><a href="/schedule/pages/sp_detail_form.php?key=all"><i class="fa fa-search"></i></a></li>
-    <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+    <li><a href="/schedule/php/sign_out.php"><i class="fa fa-sign-out"></i></a></li>
   </ul>
 </header>
 
@@ -57,7 +57,7 @@
     const headerName = window.location.href; //현재 url 주소를 가져오는 함수
     //console.log(headerName);
     const headerBtns = document.querySelectorAll('.gnb li');
-    const headerPage = ['index','sp_insert_form','sp_detail_form'];
+    const headerPage = ['index','sp_insert_form','detail'];
     //console.log(headerBtns);
 
     for (let i=0; i < headerBtns.length; i++){

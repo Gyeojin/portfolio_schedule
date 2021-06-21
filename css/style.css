@@ -213,3 +213,24 @@ z-index: 999; /* Sit on top */left: 0;top: 0;width: 100%; /* Full width */height
 .board-table li span:nth-child(5){width:10%;}
 
 .board-table-btn{margin: 20px 0; display: flex; justify-content: center;}
+
+/* Detail View Page Style Code */
+.detail-view em {font-style: normal;}
+.hidden-tit, .hidden-con, .send-update {display: none;}
+
+.detail-title h2 {font-size: 18px; font-weight: 300; padding-left: 20px; border-left: 3px solid #ff9062;}
+.detail-title input {padding: 10px; color: #999; border: 1px solid #ccc; width: 40%;}
+.detail-title input:focus {border: 1px solid #ff9062;}
+.board-contents .hidden-con {width: 100%; height: 120px; border: 1px solid #ccc; color: #999; resize: none;_border-radius: 5px; font-family: 'Roboto', 'Noto Sans KR', sans-serif; padding:10px;}
+.board-contents .hidden-con:focus {border: 1px solid #ff9062;}
+
+.detail-view li span:nth-child(1){width:10%;}
+.detail-view li span:nth-child(2){width:20%;}
+.detail-view li span:nth-child(3){width:50%;}
+.detail-view li span:nth-child(4){width:20%;}
+
+.detail-btns {width: 100%; height: auto; display: flex; justify-content: center;}
+.detail-btns button, .send-update button {border: 1px solid #ff9062; background:#ff9062; color: #fff; padding: 5px 15px; transition: all 0.4s;}
+.detail-btns button:hover {background: #fff; color: #ff9062;}
+
+.send-update{width: 100%; height: auto; padding: 0 0 10px 0; margin: 0 0 10px 0; border-bottom: 1px solid #f0f0f0; text-align: center;}

@@ -1,4 +1,4 @@
-.slider{width:20%; height:500px; background:yellow; margin:auto; overflow:hidden;}
+.slider{width:20%; height:500px; background:yellow; margin:auto; _overflow:hidden;}
 .slide-box{width:100%; height:100%; background:#ccc; border:1px solid; position:relative; left:0;}
 .slide-box>div{width:100%; height:100%; position:absolute; top:0;}
 .slide-box>div.slide1{background:#777; left:0;}
