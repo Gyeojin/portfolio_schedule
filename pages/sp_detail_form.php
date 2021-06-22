@@ -111,6 +111,9 @@
 
     </div>
     <!-- End of Main Dashboard Frame -->
+    <?php
+        include $_SERVER['DOCUMENT_ROOT']."/schedule/include/modal.php";
+    ?>
   </div>
 
   <!-- Jquery Framework Load -->

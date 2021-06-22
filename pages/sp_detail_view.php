@@ -52,6 +52,10 @@
         include $_SERVER['DOCUMENT_ROOT']."/schedule/include/header.php";
       ?>
 
+      <?php 
+          include $_SERVER['DOCUMENT_ROOT']."/schedule/include/modal.php";
+      ?>
+
       <section class="graph-ui detail">
 
         <?php
@@ -121,6 +125,7 @@
 
           <div class="detail-btns">
             <button type="button" class="update-btn">수정</button>
+            <button type="button" class="delete-btn">삭제</button>
           </div>
           
         </div>
@@ -147,6 +152,7 @@
 
   <script>
     $(function(){
+      //수정 버튼 클릭 이벤트
        $(".update-btn").click(function(){
         $(this).toggleClass("on"); //this는 자신을 감싸는 함수를 그대로 받는건지?
 
@@ -159,6 +165,16 @@
              $(".hidden-tit, .hidden-con, .send-update").hide(); //해당 클래스들을 숨긴다 (=display:none)
              $(this).text('수정');
          }
+       });
+       //삭제 버튼 클릭 이벤트
+       $(".delete-btn").click(function(){
+        const isCheck = confirm('정말 삭제하시겠습니까?');
+        //alert(isCheck);
+        if(isCheck ===false){
+          return false; //isCheck가 false 면 false값을 반환하고 마침
+        } else {
+          location.href='/schedule/php/sp_delete.php?del_idx=<?=$detail_num?>'; //ischeck가 true면 sp_delete.php/(해당 idx) 를 삭제
+        }
        });
     });
   </script>
