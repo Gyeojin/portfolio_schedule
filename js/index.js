@@ -101,7 +101,7 @@ $(function(){
     {poKind:'.db-pofol', bColor:'#7c41f5', tColor:'#c1a5fa'},
     {poKind:'.api-pofol', bColor:'#ff9062', tColor:'#ffbca1'},
     {poKind:'.renewal-pofol', bColor:'#3acbe8', tColor:'#a2dce8'},
-    {poKind:'.planning-pofol', bColor:'#69c', tColor:'#ace'},
+    {poKind:'.planning-pofol', bColor:'#538053', tColor:'#7BA87B'},
     // {poKind:'.total-chart', bColor:'#69c', tColor:'#ace'}
   ];
 

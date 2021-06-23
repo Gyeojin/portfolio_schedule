@@ -87,6 +87,14 @@
           $detail_con = $detail_row['SP_con'];
           $detail_reg = $detail_row['SP_reg'];
 
+          if($detail_cate == "thermometer-half"){
+            $detail_cate = "API";
+          } else if($detail_cate == "clone"){
+            $detail_cate = "Renewal";
+          }else if($detail_cate == "bar-chart-o"){
+            $detail_cate = "planning";
+          }
+
           //echo $detail_num,$detail_cate;
         ?>
         <form action="/schedule/php/update_details.php?abc=1"> <!--method 가 없으면 GET 방식이 디폴트-->

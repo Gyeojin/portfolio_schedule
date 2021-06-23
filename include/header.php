@@ -1,7 +1,7 @@
 <?php
   //쿠키와 마찬가지로 세션도 어떤 헤더보다도 먼저 생성해야만 합니다.
   session_start();
-  if(isset($_SESSION['usercode'])){ //isset : php에 'authcode' 라는게 있는지 존재여부를 확인
+  if(isset($_SESSION['usercode'])){ //isset : 세션에 'authcode' 라는게 있는지 존재여부를 확인
     $authcode = $_SESSION['usercode'];
   } else {
     echo "

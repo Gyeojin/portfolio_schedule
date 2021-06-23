@@ -1,3 +1,5 @@
+<meta charset="UTF-8">
+
 <?php
 
   $update_num = $_REQUEST['update_num'];

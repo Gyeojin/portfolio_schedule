@@ -79,7 +79,7 @@ header .sign-out{font-size:20px;}
 .graph-ui div.intro .slide-box:nth-child(1){background:#ff9062;}
 .graph-ui div.intro .slide-box:nth-child(2){background:#7c41f5;}
 .graph-ui div.intro .slide-box:nth-child(3){background:#3acbe8;}
-.graph-ui div.intro .slide-box:nth-child(4){background:cyan}
+.graph-ui div.intro .slide-box:nth-child(4){background:#538053}
 
 .graph-ui div.intro h2{font-size:28px; text-transform:uppercase; transform:translateY(25px); opacity:0;}
 .graph-ui div.intro p{transform:translateY(25px); opacity:0;}
@@ -168,7 +168,13 @@ z-index: 999; /* Sit on top */left: 0;top: 0;width: 100%; /* Full width */height
 }
 
 /* Modal Content/Box */
-.modal-content {background-color: #fefefe;margin: 15% auto; /* 15% from the top and centered */padding: 20px;border: 1px solid #888;width: 80%; /* Could be more or less, depending on screen size */}
+.modal-content {background-color: #fefefe;margin: 15% auto; /* 15% from the top and centered */padding: 40px 20px; border: 1px solid #888;width: 80%; /* Could be more or less, depending on screen size */position: relative;}
+
+.modal-content .close {position: absolute; top: -20px; right: -20px; background: #fefefe; border: 1px solid #ccc; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg);}
+.modal-content .close span {background: #ccc; position: absolute;}
+.modal-content .close span:nth-child(1) {width: 60%; height: 2px;}
+.modal-content .close span:nth-child(2) {width: 2px; height: 60%;}
+
 .modal-content .rate-form{width:100%; height:auto; display:flex;}
 .modal-content .rate-form p{width:25%; height:auto; display:flex; padding:0 5px; justify-content: space-between;}
 .modal-content .rate-form p label{width:40%; padding:5px 10px; display:flex; justify-content: center; color:#fff; background:#7c41f5; border-radius:3px; align-items: center; text-align: center;}

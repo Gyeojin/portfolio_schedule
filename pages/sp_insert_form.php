@@ -71,6 +71,15 @@
             <button type="button" onclick="spInsert()">진행 상황 작성</button>
           </div>
           <script>
+            document.addEventListener('keydown',function(e){
+              const keyCode = e.keyCode;
+              //console.log(keyCode);
+              if(keyCode == 13){
+                e.preventDefault(); //엔터에 들어있는 디폴트 기능(submit) 기능을 없애주는 함수
+                spInsert();
+              }
+            });
+
             function spInsert(){
               if(!document.spInputForm.spInputTit.value){
                 alert('일정 요약을 작성해 주세요.');

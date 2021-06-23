@@ -59,7 +59,7 @@
 @media screen and (max-width:768px){
   .wrapper{display:block; height:auto; min-height:auto;}
 
-  .dashboard{width:100%; height:100%; border-radius:0;}
+  .dashboard{width:100%; height:100%; border-radius:0; display: block;}
 
   /* Header CSS Code */
   header{padding:15px 25px;}
@@ -121,7 +121,7 @@
   .detail-btns button{font-size: 12px;}
 }
 
-
+  
 @media screen and (max-width:450px){
 
   /* Detail Page Style Code */
@@ -129,6 +129,7 @@
   .graph-ui.detail .each-pofol .each-graph div{width: calc(50% - 5px); margin: 5px 0;}
   .board-table li.board-contents span a.del-btn.txt {display: none;}
   .board-table li.board-contents span a.del-btn.icon{display: block;}
+  .graph-ui.detail .detail-board {height: auto;}
 
 }
 
@@ -163,8 +164,9 @@
   .graph-ui .btns button{font-size:12px; padding:8px 15px;}
 
   /* Modal Content Style Code */
-  .modal-content{width:95%; margin:40% auto;}
+  .modal-content{width:85%; margin:40% auto;}
   .modal-content .rate-form p label{font-size:12px;}
+  .modal-content .close {width: 30px; height: 30px; right: -10px; top: -10px;}
 
   #updateBtn{font-size:12px;}
 
