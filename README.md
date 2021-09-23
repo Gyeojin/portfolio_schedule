@@ -1,7 +1,11 @@
 ## ✔SCHEDULE PROJECT
 <br>
+
 *개발 프로젝트*
+
 <br>
+
+![schedule_01](https://user-images.githubusercontent.com/84562763/134463380-0add6ce4-a1fa-4069-b86f-a17b8a411779.jpg)
 
 효과적인 일정 관리를 위한 스케줄 홈페이지.
 <br>
@@ -32,8 +36,12 @@ http://gyeoj93.dothome.co.kr/schedule/<br>
 * [JavaScript]   
 * [JQuery]   
 <br>
+
 ## 플러그인
+
 이 사이트를 만드는데 쓰인 플러그인은 다음과 같습니다.   
 <br>
-Plugin	Website
-lightslider.js	http://sachinchoolur.github.io/lightslider/index.html
+
+| Plugin | WebSite |
+|---|:---:|
+| `lightslider.js` | http://sachinchoolur.github.io/lightslider/index.html |
